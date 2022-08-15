@@ -8,21 +8,20 @@ class MainComponent extends Component {
     render() {
         return (
             <>
-                <button onClick={this.toggleChildVisibility}>toggle child component</button>
-                <ChildComponent ref={this.myRef} />  {/* set ref to controll child component */}
+                <button onClick={this.toggleChildVisibility}>
+                    toggle child component
+                </button>
+                <ChildComponent ref={this.myRef} />{' '}
+                {/* set ref to controll child component */}
             </>
         );
     }
-};
+}
 
-class ChildComponent extends Component {
-    state = { isActive: true };
+const ChildComponent = () => {
+    const [isActive, setIsActive] = useState(true);
 
-    toggleButton = () => this.setState({ isActive: !this.state.isActive });
+    const toggleButton = () => setIsActive(!isActive);
 
-    render() {
-        return (
-            this.state.isActive ? <div>child component</div> : null
-        );
-    }
+    return isActive ? <div>child component</div> : null;
 };

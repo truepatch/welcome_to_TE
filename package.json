@@ -1,0 +1,25 @@
+{
+    "name": "welcome_to_te-1",
+    "version": "0.0.0",
+    "description": "Тестовое задание на позицию front-end разработчика [TileExpert](https://jobs.tile.expert/) компании.",
+    "main": "index.js",
+    "private": "true",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/truepatch/welcome_to_TE.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/truepatch/welcome_to_TE/issues"
+    },
+    "homepage": "https://github.com/truepatch/welcome_to_TE#readme",
+    "dependencies": {
+        "@types/react": "^18.0.17",
+        "react": "^18.2.0"
+    }
+}

@@ -1,7 +1,7 @@
 import { Fragment, memo } from 'react';
 
 const MainComponent = ({
-    user = { name: 'unknown', age: null } // default value for `props.user`
+    user = { name: 'unknown', age: null }, // default value for `props.user`
 }) => {
     return (
         <Fragment>
@@ -11,8 +11,15 @@ const MainComponent = ({
 };
 
 // memoized component
-const ChildComponent = memo(({ user: { name, age } }) => {
-    return (
-        <div>user name: {name}, user age: {age}</div>
-    )
-});
+const ChildComponent = memo(
+    ({ user: { name, age } }) => {
+        return (
+            <div>
+                user name: {name}, user age: {age}
+            </div>
+        );
+    },
+    (prevProps, nextProps) => {
+        return JSON.stringify(prevProps) === JSON.stringify(nextProps);
+    }
+);
