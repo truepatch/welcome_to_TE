@@ -47,7 +47,7 @@ class ThirdComponent extends PureComponent<IUser> {
 // class component
 class FourthComponent extends Component<IProps> {
     shouldComponentUpdate(nextProps: Readonly<IProps>): boolean {
-        return JSON.stringify(this.props) === JSON.stringify(nextProps);
+        return JSON.stringify(this.props) !== JSON.stringify(nextProps);
     }
     render() {
         return (
